@@ -12,7 +12,7 @@ Works on **macOS**, **Windows**, and **Linux**.
 
 ## How It Works
 
-TruthAI uses a model called **TruthNN** — a [BERT](https://arxiv.org/abs/1810.04805) transformer fine-tuned on ~8,000 politically labeled news articles. When you submit an article, the model:
+TruthAI uses a model called **TruthNN**: a [BERT](https://arxiv.org/abs/1810.04805) transformer fine-tuned on ~8,000 politically labeled news articles. When you submit an article, the model:
 
 1. **Tokenizes** the text into subword pieces using BERT's WordPiece vocabulary
 2. **Encodes** the tokens through 12 transformer layers, building contextual representations of each word
