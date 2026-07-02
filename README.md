@@ -1,5 +1,9 @@
 # TruthAI -- News Article Political Bias Analyzer
 
+[![Hugging Face](https://img.shields.io/badge/Model-TruthNN-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://huggingface.co/seanpe200/TruthNN)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Powered-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+
 ![TruthAI Screenshot](TruthAI.png)
 
 Analyzes news articles for political bias using a fine-tuned BERT neural network. Paste text or provide a URL the app reviews the article and classifies it on a left-right political spectrum.
