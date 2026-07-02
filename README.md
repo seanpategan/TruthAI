@@ -1,9 +1,9 @@
-# TruthAI — News Article Political Bias Analyzer
+# TruthAI -- News Article Political Bias Analyzer
 
 <!-- Add a screenshot: save as screenshot.png in the project root -->
 <!-- ![TruthAI Screenshot](screenshot.png) -->
 
-Analyzes news articles for political bias using a fine-tuned BERT neural network. Paste text or provide a URL — the app scrapes the article and classifies it on a left-right political spectrum.
+Analyzes news articles for political bias using a fine-tuned BERT neural network. Paste text or provide a URL the app reviews the article and classifies it on a left-right political spectrum.
 
 Works on **macOS**, **Windows**, and **Linux**.
 
@@ -15,7 +15,7 @@ TruthAI uses a model called **TruthNN** — a [BERT](https://arxiv.org/abs/1810.
 2. **Encodes** the tokens through 12 transformer layers, building contextual representations of each word
 3. **Classifies** the article using a regression head on top of BERT's `[CLS]` token embedding
 4. **Estimates confidence** by running 30 forward passes with dropout enabled ([Monte Carlo Dropout](https://arxiv.org/abs/1506.02142)) and measuring prediction variance
-5. **Identifies influential words** using gradient-based attribution — computing how much each token pushes the score left or right
+5. **Identifies influential words** using gradient-based attribution: computing how much each token pushes the score left or right
 
 The output is a bias score from **-10** (far-left) to **+10** (far-right), a confidence percentage, and a list of the most influential words in the article.
 
@@ -58,9 +58,9 @@ python train_bert_improved.py combined_full_articles_training.csv
 ```
 
 Auto-detects the best available device:
-- **NVIDIA GPU** (CUDA) — fastest
-- **Apple Silicon** (MPS) — fast on M1/M2/M3/M4 Macs
-- **CPU** — works everywhere, uses half your cores to keep the machine usable
+- **NVIDIA GPU** (CUDA): fastest
+- **Apple Silicon** (MPS): fast on M1/M2/M3/M4 Macs
+- **CPU**: works everywhere, uses half your cores to keep the machine usable
 
 Training runs for up to 20 epochs with early stopping. Saves the best model to `truthnn.pth`.
 
@@ -70,7 +70,7 @@ Training runs for up to 20 epochs with early stopping. Saves the best model to `
 python app.py
 ```
 
-Open **http://localhost:5000** — enter a URL or paste article text to analyze.
+Open **http://localhost:5000** enter a URL and/or paste article text to analyze. (More reliable looking at a whole article)
 
 ### JSON API
 
@@ -151,7 +151,7 @@ text,bias_x
 "Another article...",4.0
 ```
 
-Or provide `text` and `source` columns — known sources are auto-mapped to bias scores:
+Or provide `text` and `source` columns... known sources are auto-mapped to bias scores:
 
 ```csv
 text,source
@@ -176,7 +176,7 @@ python_nn_news_bias/
 
 ## Limitations
 
-- Most training labels are source-based — every article from the same outlet gets the same score regardless of content
+- Most training labels are source-based (for efficiency in training) every article from the same outlet gets the same score regardless of content (EX: A News Oppinion vs another A News article)
 - Political bias is inherently subjective and multidimensional; a single left-right score is a simplification
 - URL scraping may not work on paywalled or JavaScript-rendered sites
 - Confidence estimates can be miscalibrated on out-of-distribution text (e.g., non-English articles, opinion columns, satire)
