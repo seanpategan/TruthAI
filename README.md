@@ -1,7 +1,6 @@
 # TruthAI -- News Article Political Bias Analyzer
 
-<!-- Add a screenshot: save as screenshot.png in the project root -->
-<!-- ![TruthAI Screenshot](screenshot.png) -->
+![TruthAI Screenshot](TruthAI.png)
 
 Analyzes news articles for political bias using a fine-tuned BERT neural network. Paste text or provide a URL the app reviews the article and classifies it on a left-right political spectrum.
 
