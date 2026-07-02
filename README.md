@@ -1,6 +1,6 @@
 # TruthAI -- News Article Political Bias Analyzer
 
-[![Hugging Face](https://img.shields.io/badge/Model-TruthNN-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://huggingface.co/seanpe200/TruthNN)
+[![Hugging Face](https://img.shields.io/badge/Model-TruthNN-FFD21E?style=flat&logo=huggingface&logoColor=white)](https://huggingface.co/seanpe200/TruthNN)
 [![PyTorch](https://img.shields.io/badge/PyTorch-Powered-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
 
