@@ -24,6 +24,8 @@ The output is a bias score from **-10** (far-left) to **+10** (far-right), a con
 pip install -r requirements.txt
 ```
 
+Download the trained model from [Hugging Face](https://huggingface.co/seanpe200/TruthNN) and place `truthnn.pth` in the project root.
+
 ## Usage
 
 ### 1. Prepare Training Data
